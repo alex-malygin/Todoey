@@ -157,6 +157,3 @@ extension ToDoListViewController: UISearchBarDelegate {
     
     
 }
-
-
-
