@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Todoey-->
+        <!--Items-->
         <scene sceneID="Egc-0i-HFw">
             <objects>
                 <tableViewController id="Hoz-It-UFM" customClass="ToDoListViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             <outlet property="delegate" destination="Hoz-It-UFM" id="c0f-Gf-TTJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todoey" id="EMR-Xx-rki">
+                    <navigationItem key="navigationItem" title="Items" id="EMR-Xx-rki">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cu9-pX-gQt">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
