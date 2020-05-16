@@ -29,13 +29,25 @@ class CategoryViewController: UITableViewController {
 		return categories.count
 	}
 	
-	// MARK: - TableView Delegate
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
 		
 		cell.textLabel?.text = categories[indexPath.row].name
 		
 		return cell
+	}
+	
+	// MARK: - TableView Delegate
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		performSegue(withIdentifier: "goToItems", sender: self)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let destinationVC = segue.destination as! ToDoListViewController
+		
+		if let indexPath = tableView.indexPathForSelectedRow {
+			destinationVC.selectedCategory = categories[indexPath.row]
+		}
 	}
 	
 	// MARK: - Data Manipulations
